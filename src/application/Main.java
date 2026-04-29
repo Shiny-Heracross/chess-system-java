@@ -1,9 +1,14 @@
 package application;
 
+import boardgame.Position;
+
 public class Main {
 
 	public static void main(String[] args) {
-		System.out.println("penis gordo e graúdo");
+
+		Position position = new Position(1, 2);
+		System.out.println(position);
+		
 	}
 
 }
