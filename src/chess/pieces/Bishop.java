@@ -13,7 +13,7 @@ public class Bishop extends ChessPiece {
 
 	@Override
 	public String toString() {
-		return "B";
+		return "♝";
 	}
 
 	@Override
@@ -24,7 +24,7 @@ public class Bishop extends ChessPiece {
 
 		// upper left diagonal
 
-		p.setValues(position.getRow() - 1, position.getColumn() -1);
+		p.setValues(position.getRow() - 1, position.getColumn() - 1);
 		while (getBoard().positionExists(p) && !getBoard().thereIsAPiece(p)) {
 			mat[p.getRow()][p.getColumn()] = true;
 			p.setRow(p.getRow() - 1);
@@ -46,7 +46,7 @@ public class Bishop extends ChessPiece {
 			mat[p.getRow()][p.getColumn()] = true;
 		}
 
-		// lower right  diagonal
+		// lower right diagonal
 
 		p.setValues(position.getRow() + 1, position.getColumn() + 1);
 		while (getBoard().positionExists(p) && !getBoard().thereIsAPiece(p)) {

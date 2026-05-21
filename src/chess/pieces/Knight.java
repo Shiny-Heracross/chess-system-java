@@ -13,8 +13,9 @@ public class Knight extends ChessPiece {
 
 	@Override
 	public String toString() {
-		return "N";
+		return "♞";
 	}
+
 	private boolean canMove(Position position) {
 		ChessPiece p = (ChessPiece) getBoard().piece(position);
 		return p == null || p.getColor() != getColor();
@@ -25,7 +26,7 @@ public class Knight extends ChessPiece {
 		boolean[][] mat = new boolean[getBoard().getRows()][getBoard().getColumns()];
 
 		Position p = new Position(0, 0);
-		
+
 		// two above one left
 		p.setValues(position.getRow() - 2, position.getColumn() - 1);
 
